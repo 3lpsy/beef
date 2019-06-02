@@ -1,4 +1,4 @@
-FROM ruby:2.3-slim
+FROM ruby:2.5-slim
 LABEL maintainer "Ilya Glotov <contact@ilyaglotov.com>"
 
 ENV LANG="C.UTF-8" \
@@ -32,7 +32,11 @@ RUN apt-get update \
 
 WORKDIR /home/beef/beef
 
-VOLUME /home/beef/.beef
+# VOLUME /home/beef/.beef
+
+RUN mkdir /home/beef/.beef
+
+RUN chown -R beef /home/beef
 
 USER beef
 

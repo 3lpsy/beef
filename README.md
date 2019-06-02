@@ -1,5 +1,10 @@
-Docker for BeEF
----------------
+# About
+
+This is a fork of security-dockerfiles/beef. The primary modification is an updated base image that is less likely to fail when running beef in the container. To run this fork, please build it locally first as there is no cloud image in DockerHub
+
+# Original Readme
+
+## Docker for BeEF
 
 ## Usage
 
@@ -19,8 +24,9 @@ credentials when container starts and with `docker logs beef`.
 
 The beef user and password pair could be easily overridden by using the
 following environment variables:
-* `BEEF_USER`
-* `BEEF_PASSWORD`
+
+- `BEEF_USER`
+- `BEEF_PASSWORD`
 
 Start container with customized credentials:
 
@@ -41,7 +47,7 @@ docker run -itd \
 I couldn't find any suitable Dockerfile out there for the recent version of
 [BeEF](https://github.com/beefproject/beef) that is actually working.
 
-Moreover I have a personal priority to run app in the container without root 
+Moreover I have a personal priority to run app in the container without root
 privileges. Most developers seem to ignore this somehow.
 
 ### Why not based on Alpine
